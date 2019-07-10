@@ -1,0 +1,167 @@
+/* css variable */
+:root {
+  --color-white: #fff;
+  --color-dark: #333;
+  --color-medium: #414141;
+  --color-light: #e5e2e2;
+  --color-silver: #dee1e4;
+  --color-green: #17f5d7;
+
+  --bg-light: #f5f1f1;
+  --bg-dark: #666363;
+  --bg-blue: dodgerblue;
+  --bg-white: #fff;
+}
+/* Resetting style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-dark, #333);
+  line-height: 2rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+section,
+main {
+  display: block;
+}
+
+body {
+  font-family: serif, sans-serif, "Arial Narrow", Arial;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  color: var(--color-medium);
+  font-weight: 500;
+}
+
+/* Grid layout */
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.col1 {
+  justify-self: flex-end;
+}
+.col2 {
+  justify-self: flex-start;
+}
+
+/* content-spacer */
+.container {
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 4rem 2rem;
+  background: var(--bg-light);
+}
+
+.main {
+  padding: 2rem 0;
+  background: var(--bg-blue);
+}
+
+#title {
+  color: #fff;
+  text-align: center;
+}
+
+#description {
+  line-height: 1.6rem;
+  padding-bottom: 2.3rem;
+  text-align-last: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--bg-blue);
+  text-shadow: 10px 0 10px var(--color-green);
+}
+
+#name,
+#email,
+#number,
+#comment {
+  width: 70%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+#dropdown {
+  padding: 0.3rem;
+  margin-top: 0.4rem;
+  width: 70%;
+}
+
+.checkbox,
+.radio {
+  margin: 1rem 0;
+}
+
+/* margin for all section */
+.textarea,
+.questionnair-radio,
+.questionnair-select,
+.questionnair-checkbox {
+  margin-top: 1.8rem;
+}
+.personal-detail {
+  margin: 0.5rem;
+}
+
+/* Button style */
+#submit {
+  display: block;
+  cursor: pointer;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.2s linear;
+  font-size: 1.2rem;
+  width: 50%;
+  margin: 3rem auto;
+  box-shadow: 1px 1px 6px black;
+  border: none;
+}
+/* button hover effect */
+#submit:hover {
+  background: var(--bg-blue);
+  color: var(--color-white);
+}
+
+/* Style For small screen below 655px- block layout */
+@media (max-width: 655px) {
+  .d-flex,
+  .d-grid {
+    display: block;
+  }
+
+  #submit {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+  }
+  label {
+    margin-right: 0;
+  }
+}
